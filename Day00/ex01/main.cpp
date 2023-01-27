@@ -11,6 +11,12 @@ int main()
     while(1)
     {
         std::getline(std::cin,str);
+        if (std::cin.fail())
+        {
+        std::cin.clear();
+        std::cin.ignore();
+        return(0);
+        }
         if (str == "ADD")
         {
             if (PhoneBook.Add(i) == 1)
