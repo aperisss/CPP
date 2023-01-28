@@ -3,8 +3,7 @@
 int main()
 {
     Zombie *azz;
-    std::cout << "zombiehorde function called" << std::endl;
-    azz = zombieHorde(10, "horde");
+    azz = zombieHorde(20, "horde");
 
     delete [] azz;
 

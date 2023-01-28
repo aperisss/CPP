@@ -8,6 +8,11 @@ std::string file_copy(char **av)
     char c;
     std::string str;
     std::ifstream ifs(av[1]);
+    if(!ifs)
+    {
+        std::cerr << "Error with the file " << std::endl;
+        exit(0);
+    }
     c = ifs.get();
     while(ifs.good())
     {
@@ -22,6 +27,11 @@ std::string replace_string(std::string copy, char **av)
 {
     std::string s1 = av[2];
     std::string s2 = av[3];
+    if (s1.length() == 0 || s2.length() == 0)
+    {
+        std::cout << "Error, empty args" << std::endl;
+        exit(0);
+    }
     std::string tmp;
     std::string tmp2;
     std::string replace;
@@ -49,9 +59,8 @@ int main(int ac, char **av)
     std::cout << copy << std::endl;
     name = ".replace";
     filename = av[1] + name;
-    //chngement ici
-    std::ofstream change(filename.c_str());
-    if (change)
-        change << copy;
+    std::ofstream replace(filename.c_str());
+    if (replace)
+        replace << copy;
     return (0);
 }
