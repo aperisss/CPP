@@ -13,9 +13,9 @@ int main()
         std::getline(std::cin,str);
         if (std::cin.fail())
         {
-        std::cin.clear();
-        std::cin.ignore();
-        return(0);
+            std::cin.clear();
+            std::cin.ignore();
+            return(0);
         }
         if (str == "ADD")
         {

@@ -8,8 +8,6 @@ class PhoneBook
     public:
     PhoneBook(void);
     ~PhoneBook(void);
-    void setnb(int nbs);
-    int getnb(void);
     int Add(int i);
     int Search();
     void Exit(void);
@@ -18,8 +16,6 @@ class PhoneBook
     int ValideName(std::string str);
     int ValideNumber(std::string str);
     private:
-   
-    int nb;
     Contact rep[8];
 };
 

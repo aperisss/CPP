@@ -15,6 +15,8 @@ int PhoneBook::Add(int i)
     while(ValideName(str) == 0)
     {
         std::getline(std::cin, str);
+        if (std::cin.eof())
+		    exit(0);
         if (ValideName(str) == 0)
             std::cout << " Enter a valid name" << std::endl;
         if (str == "EXIT")
@@ -25,6 +27,8 @@ int PhoneBook::Add(int i)
     while(ValideName(str) == 0)
     {
         std::getline(std::cin, str);
+        if (std::cin.eof())
+		    exit(0);
         if (ValideName(str) == 0)
             std::cout << " Enter a valid name" << std::endl;
         if (str == "EXIT")
@@ -35,6 +39,8 @@ int PhoneBook::Add(int i)
     while(ValideName(str) == 0)
     {
         std::getline(std::cin, str);
+        if (std::cin.eof())
+		    exit(0);
         if (ValideName(str) == 0)
             std::cout << " Enter a valid name" << std::endl;
         if (str == "EXIT")
@@ -42,9 +48,11 @@ int PhoneBook::Add(int i)
     }
     this->rep[i].SetNickName(str);
     str.clear();
-    while(ValideNumber(str) == 0)
+    while (ValideNumber(str) == 0)
     {
         std::getline(std::cin, str);
+        if (std::cin.eof())
+		    exit(0);
         if (ValideNumber(str) == 0)
             std::cout << " Enter a valid number" << std::endl;
         if (str == "EXIT")
@@ -53,6 +61,8 @@ int PhoneBook::Add(int i)
     this->rep[i].SetPhoneNumber(str);
     str.clear();
     std::getline(std::cin, str);
+    if (std::cin.eof())
+		    exit(0);
      if (str == "EXIT")
         return (1);
     this->rep[i].SetDarkestSecret(str);
@@ -73,11 +83,13 @@ int PhoneBook::Search()
         i++;
     }
     std::getline(std::cin,str);
+    if (std::cin.eof())
+		exit(0);
     if (str == "EXIT")
         return (1);
     if (GoodSearch(str) == 0)
     {
-        std::cout << "Enter a index between 1 and 9" << std::endl;
+        std::cout << "Enter a index between 1 and 8" << std::endl;
         this->Search();
         return (0);
     }
@@ -148,13 +160,15 @@ int PhoneBook::ValideNumber(std::string str)
     int i = 0;
     if (str.size() == 0)
         return (0);
+    if (str[0] != '0')
+        return (0);
     while (str[i])
     {
         if (str[i] < '0' || str[i] > '9')
             return (0);
         i++;
     }
-    if (str.size() > 10)
+    if (str.size()!= 10)
         return (0);
     return (1);
 }
