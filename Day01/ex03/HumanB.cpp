@@ -14,7 +14,7 @@ HumanB::~HumanB (void)
 
 void HumanB::attack(void)
 {
-    if ((this->weapon == NULL))
+    if (this->weapon == NULL)
         std::cout << "HumanB doesn't have a weapon" <<std::endl;
     else
     {

@@ -1,10 +1,10 @@
-NAME = megaphone
+NAME = Encore_plus_de_cerveaux_!
 
 CC = c++
 RM = rm -rf
 FLAGS = -Wextra -Wall -Werror -std=c++98
 
-SRC_FILES = megaphone.cpp
+SRC_FILES = zombieHorde.cpp main.cpp Zombie.cpp
 OBJS = $(SRC_FILES:.cpp=.o)
 OBJS_F	= _objFiles/
 
@@ -20,7 +20,7 @@ all:				$(NAME)
 clean:
 					@${RM} $(OBJS_F)
 					@${RM}  ${OBJS}
-					
+
 fclean: 	clean
 					@${RM} $(NAME)
 

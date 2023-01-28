@@ -26,8 +26,10 @@ int main()
                 i = 0;
         }
         else if (str == "SEARCH")
-            if (PhoneBook.Search(0) == 1)
+        {
+            if (PhoneBook.Search() == 1)
                 return (0);
+        }
         else if (str == "EXIT")
             break;
         else 

@@ -11,7 +11,7 @@ class PhoneBook
     void setnb(int nbs);
     int getnb(void);
     int Add(int i);
-    int Search(int i);
+    int Search();
     void Exit(void);
     std::string GoodLenght(std::string str);
     int GoodSearch(std::string str);

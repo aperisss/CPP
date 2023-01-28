@@ -1,6 +1,7 @@
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
 #include <string>
+# include <cstdlib>
 
 PhoneBook::PhoneBook(void)
 {
@@ -58,7 +59,7 @@ int PhoneBook::Add(int i)
     return 0;
 }
 
-int PhoneBook::Search(int j)
+int PhoneBook::Search()
 {
     std::string str;
     int i;
@@ -77,11 +78,12 @@ int PhoneBook::Search(int j)
     if (GoodSearch(str) == 0)
     {
         std::cout << "Enter a index between 1 and 9" << std::endl;
-        this->Search(1);
+        this->Search();
         return (0);
     }
     else
-    i = stoi(str);
+    // i = stoi(str);
+    i = std::strtol(str.data(), NULL, 10);
     if ( i >= 1 && i <= 9)
     {
         std::cout << this->rep[i - 1].GetFirstName() << std::endl;

@@ -3,13 +3,11 @@
 
 Contact::Contact(void)
 {
-    // std::cout << "bonjour" << std::endl;
     return;
 }
 
 Contact::~Contact(void)
 {
-    // std::cout << "au revoir" << std::endl;
     return;
 }
 

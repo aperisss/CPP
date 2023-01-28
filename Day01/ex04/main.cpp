@@ -25,7 +25,7 @@ std::string replace_string(std::string copy, char **av)
     std::string tmp;
     std::string tmp2;
     std::string replace;
-    int index = 0;
+    size_t index = 0;
     while ((index = copy.find(s1, index)) != std::string::npos) {
         tmp = copy.substr(0, index);
         tmp2 = copy.substr(index + s1.size(), copy.size());
@@ -49,8 +49,9 @@ int main(int ac, char **av)
     std::cout << copy << std::endl;
     name = ".replace";
     filename = av[1] + name;
-    std::ofstream replace(filename);
-    if (replace)
-        replace << copy;
+    //chngement ici
+    std::ofstream change(filename.c_str());
+    if (change)
+        change << copy;
     return (0);
 }

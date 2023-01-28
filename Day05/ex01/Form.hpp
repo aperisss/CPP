@@ -22,7 +22,7 @@ class Form
     Form(Form const &other);
     Form &operator=(Form const &other);
 
-    std::string const	getName();
+    std::string getName();
     bool	getIsSigned() const;
     int getExec() const;
     int getSign() const;

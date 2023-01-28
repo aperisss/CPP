@@ -61,7 +61,7 @@ std::ostream &operator<<(std::ostream &ofs, Form &in) {
     return ofs;
 }
 
-std::string const	Form::getName() {
+std::string Form::getName() {
 	return name;
 }
 

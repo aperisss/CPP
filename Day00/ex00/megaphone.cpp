@@ -12,7 +12,7 @@ int main(int ac, char **av)
     {
         while(arg != ac)
         {
-            for ( int i = 0; i < strlen(av[arg]); i++ )
+            for ( size_t i = 0; i < strlen(av[arg]); i++ )
                 std::cout << (char)toupper(av[arg][i]);
             arg++;
         }
