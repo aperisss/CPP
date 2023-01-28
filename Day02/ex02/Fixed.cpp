@@ -191,7 +191,8 @@ const Fixed& Fixed::min(const Fixed &x, const Fixed &y)
 {
     return x < y ? x : y;
 }
-Fixed& Fixed::min(Fixed &x, Fixed &y)
+
+Fixed& Fixed::max(Fixed &x, Fixed &y)
 {
     return x > y ? x : y;
 }

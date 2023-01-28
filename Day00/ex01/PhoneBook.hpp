@@ -10,7 +10,6 @@ class PhoneBook
     ~PhoneBook(void);
     int Add(int i);
     int Search();
-    void Exit(void);
     std::string GoodLenght(std::string str);
     int GoodSearch(std::string str);
     int ValideName(std::string str);

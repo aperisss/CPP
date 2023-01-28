@@ -5,7 +5,6 @@
 
 PhoneBook::PhoneBook(void)
 {
-
     return;
 }
 
@@ -94,8 +93,7 @@ int PhoneBook::Search()
         return (0);
     }
     else
-    // i = stoi(str);
-    i = std::strtol(str.data(), NULL, 10);
+        i = std::strtol(str.data(), NULL, 10);
     if ( i >= 1 && i <= 9)
     {
         std::cout << this->rep[i - 1].GetFirstName() << std::endl;
@@ -107,15 +105,9 @@ int PhoneBook::Search()
     return 0;
 }
 
-void PhoneBook::Exit(void)
-{
-    std::cout << "phonebook" << std::endl;
-    return;
-}
 
 PhoneBook::~PhoneBook(void)
 {
-    std::cout << "phonebook bye" << std::endl;
     return;
 }
 

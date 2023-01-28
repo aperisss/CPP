@@ -1,41 +1,20 @@
+NAME	= megaphone
+	
+CC		= c++
+FLAGS	= -Wall -Wextra -Werror -std=c++98
+RM		= rm -rf
 
+.PHONY: all clean re
 
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: mabid <mabid@student.42.fr>                +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/26 04:26:12 by mabid             #+#    #+#              #
-#    Updated: 2022/12/14 12:33:55 by mabid            ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-NAME = BraiiiiiiinnnzzzZ
-
-CC = c++
-RM = rm -rf
-FLAGS = -Wextra -Wall -Werror -std=c++98
-
-SRC_FILES = newZombie.cpp randomChump.cpp main.cpp Zombie.cpp
-OBJS = $(SRC_FILES:.cpp=.o)
-OBJS_F	= _objFiles/
+all: $(NAME)
 
 $(NAME): 
-
-					@mkdir -p $(OBJS_F)
-					@$(CC) $(FLAGS) -c $(addprefix $(SRC_DIR), $(SRC_FILES))
-					@mv $(OBJS) $(OBJS_F)
-					@$(CC) $(FLAGS) $(addprefix $(OBJS_F), $(OBJS)) -o $(NAME)
-
-all:				$(NAME)
+	@ $(CC) $(FLAGS) megaphone.cpp -o $(NAME)
 
 clean:
-					@${RM} $(OBJS_F)
-					@${RM}  ${OBJS}
+	@$(RM) $(NAME)
 
-fclean: 	clean
-					@${RM} $(NAME)
+fclean:
+	@$(RM) $(NAME)
 
-re:			fclean all
+re: clean all
