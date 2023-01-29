@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <stdlib.h>
 using std::fstream;
 
 std::string file_copy(char **av)
@@ -56,11 +57,11 @@ int main(int ac, char **av)
     std::string str;
     copy = file_copy(av);
     copy = replace_string(copy, av);
-    std::cout << copy << std::endl;
     name = ".replace";
     filename = av[1] + name;
     std::ofstream replace(filename.c_str());
     if (replace)
         replace << copy;
+    replace.close();
     return (0);
 }

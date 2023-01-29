@@ -16,7 +16,7 @@ class Fixed
         int getRawBits(void) const;
 
     private:
-        int _n;
+        int _raw;
         static const int kNbrBits = 8;
 
 };

@@ -27,7 +27,6 @@ void Harl::complain(std::string level)
     };
     for (int i = 0; i < 4; i++)
     {
-        std::cout << level << " " << str[i] << i << std::endl;
         if (level == str[i])
         {
             (Harl.*ptr[i])();

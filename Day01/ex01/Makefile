@@ -1,27 +1,26 @@
-NAME = Encore_plus_de_cerveaux_!
+NAME = ZombieHorde
 
-CC = c++
-RM = rm -rf
-FLAGS = -Wextra -Wall -Werror -std=c++98
+SRC		=	Zombie.cpp ZombieHorde.cpp main.cpp
 
-SRC_FILES = zombieHorde.cpp main.cpp Zombie.cpp
-OBJS = $(SRC_FILES:.cpp=.o)
-OBJS_F	= _objFiles/
+CC 		= c++
 
-$(NAME): 
+FLAGS	= -std=c++98 -Wall -Wextra -Werror 
 
-					@mkdir -p $(OBJS_F)
-					@$(CC) $(FLAGS) -c $(addprefix $(SRC_DIR), $(SRC_FILES))
-					@mv $(OBJS) $(OBJS_F)
-					@$(CC) $(FLAGS) $(addprefix $(OBJS_F), $(OBJS)) -o $(NAME)
+OBJS 	= $(SRC:.c=.o)
 
-all:				$(NAME)
+$(NAME): $(OBJS)
+	$(CC) $(FLAGS) $(SRC) -o $(NAME)
+
+all: $(NAME) $(OBJS)
+
+%.o: %.c
+		$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-					@${RM} $(OBJS_F)
-					@${RM}  ${OBJS}
+	rm -rf $(NAME)
 
-fclean: 	clean
-					@${RM} $(NAME)
+fclean: clean
 
-re:			fclean all
+re: fclean all
+
+.PHONY: all clean fclean re

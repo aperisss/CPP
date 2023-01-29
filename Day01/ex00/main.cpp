@@ -3,9 +3,8 @@
 int main()
 {
     Zombie *azz;
-    std::cout << "newzombie function called" << std::endl;
     azz = newZombie("new");
-    std::cout << "random function called" << std::endl;
+    azz->announce();
     randomChump("random");
     delete azz;
 

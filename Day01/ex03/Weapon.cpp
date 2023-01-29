@@ -11,7 +11,7 @@ Weapon::~Weapon(void)
     return;
 }
 
-std::string Weapon::getType(void)
+const std::string& Weapon::getType(void)
 {
     // std::string &ref = this->_type;
     // return ref;
