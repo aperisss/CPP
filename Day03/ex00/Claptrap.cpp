@@ -11,7 +11,30 @@ ClapTrap::ClapTrap(std::string name)
 
 ClapTrap::~ClapTrap(void)
 {
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "Default destructor called" << std::endl;
+}
+
+ClapTrap::ClapTrap(ClapTrap const &obj)
+{
+    std::cout << "Copy ClapTrap constructor called" << std::endl;
+    this->name = obj.name;
+    this->Hit_points = obj.Hit_points;
+    this->Energy_points = obj.Energy_points;
+    this->Attack_damage = obj.Attack_damage;
+}
+
+ClapTrap &ClapTrap::operator=(ClapTrap const &obj)
+{
+    std::cout << "Copy operator called" << std::endl;
+
+    if(this != &obj)
+    {
+        this->name = obj.name;
+        this->Hit_points = obj.Hit_points;
+        this->Energy_points = obj.Energy_points;
+        this->Attack_damage  = obj.Attack_damage ;
+    }
+    return *this;
 }
 
 void ClapTrap::attack(const std::string &target)
