@@ -1,8 +1,8 @@
-#include "animal.hpp"
-#include "cat.hpp"
-#include "dog.hpp"
-#include "wrongAnimal.hpp"
-#include "wrongCat.hpp"
+#include "Animal.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 int main()
 {
     const wrongAnimal* meta = new wrongAnimal();

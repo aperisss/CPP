@@ -1,4 +1,4 @@
-#include "animal.hpp"
+#include "Animal.hpp"
 
 #ifndef DOG_HPP
 #define DOG_HPP

@@ -1,5 +1,5 @@
-#include "animal.hpp"
-#include "cat.hpp"
+#include "Animal.hpp"
+#include "Cat.hpp"
 
 
 Cat::Cat(void)

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "WrongAnimal.hpp"
+#include "wrongAnimal.hpp"
 
 #ifndef WRONGCAT_HPP
 #define WRONGCAT_HPP

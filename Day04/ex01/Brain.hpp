@@ -1,4 +1,4 @@
-#include "animal.hpp"
+#include "Animal.hpp"
 
 #ifndef BRAIN_HPP
 #define BRAIN_HPP
